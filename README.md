@@ -38,31 +38,6 @@ flowchart LR
 
 ```
 
-### Request Lifecycle
-
-```text
-Client Checkout Form
-        |
-        v
-   FastAPI Server
-        |
-        v
- Pydantic Validation
-      /       \
-   Invalid     Valid
-      |          |
-      v          v
-  422 Error   Pincode Database
-                  /      \
-               Found    Not Found
-                 |          |
-                 v          v
-          Location Data   404 Error
-                 |
-                 v
-           JSON Response
-```
-
 ## Features
 
 - Pincode-based location lookup
